@@ -1,0 +1,13 @@
+// Dynamic resizing of columns.
+div.container {
+    width: 100%;
+}
+
+div.column:first-of-type {
+    @for $i from 1 through 4 {
+        div.column:first-child:nth-last-child(#{$i}),
+        div.column:first-child:nth-last-child(#{$i}) ~ div.column {
+            width: #{100% / $i}
+        }
+    }
+}
