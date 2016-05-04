@@ -4,7 +4,7 @@ div.container {
 }
 
 div.column:first-of-type {
-    @for $i from 1 through 4 {
+    @for $i from 1 through 12 {
         div.column:first-child:nth-last-child(#{$i}),
         div.column:first-child:nth-last-child(#{$i}) ~ div.column {
             width: #{100% / $i}
